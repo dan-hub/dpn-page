@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import anime from 'animejs/lib/anime.es.js'
 import styled, { createGlobalStyle } from 'styled-components'
+import { Controller, Scene } from 'react-scrollmagic'
 
 const GloabalStyle = createGlobalStyle`
   body {
@@ -13,6 +14,7 @@ const App = () => {
   // Text showed on initial animations
   const [currentText, setCurrentText] = useState('Just another portifolio')
   const [pageStatus, setPageStatus] = useState('start-animation')
+  const [startScrollAnimations, setStartScrollAnimations] = useState(false)
 
   // Execute start timeline
   useEffect(() => {
@@ -101,6 +103,71 @@ const App = () => {
       ) : (
         <div>
           <h1 style={{ opacity: 0, color: 'white' }}>a</h1>
+          <div>
+            suhahusa
+            <h1 style={{ opacity: 0, color: 'white' }}>a</h1>
+            <h1 style={{ opacity: 0, color: 'white' }}>a</h1>
+            <h1 style={{ opacity: 0, color: 'white' }}>a</h1>
+            <h1 style={{ opacity: 0, color: 'white' }}>a</h1>
+            <h1 style={{ opacity: 0, color: 'white' }}>a</h1>
+            <h1 style={{ opacity: 0, color: 'white' }}>a</h1>
+            <h1 style={{ opacity: 0, color: 'white' }}>a</h1>
+            <h1 style={{ opacity: 0, color: 'white' }}>a</h1>
+            <h1 style={{ opacity: 0, color: 'white' }}>a</h1>
+            <h1 style={{ opacity: 0, color: 'white' }}>a</h1>
+            <h1 style={{ opacity: 0, color: 'white' }}>a</h1>
+            <h1 style={{ opacity: 0, color: 'white' }}>a</h1>
+            <h1 style={{ opacity: 0, color: 'white' }}>a</h1>
+            <h1 style={{ opacity: 0, color: 'white' }}>a</h1>
+            <h1 style={{ opacity: 0, color: 'white' }}>a</h1>
+            <h1 style={{ opacity: 0, color: 'white' }}>a</h1>
+            <h1 style={{ opacity: 0, color: 'white' }}>a</h1>
+            <h1 style={{ opacity: 0, color: 'white' }}>a</h1>
+            <h1 style={{ opacity: 0, color: 'white' }}>a</h1>
+            <h1 style={{ opacity: 0, color: 'white' }}>a</h1>
+            <h1 style={{ opacity: 0, color: 'white' }}>a</h1>
+            <h1 style={{ opacity: 0, color: 'white' }}>a</h1>
+            <h1 style={{ opacity: 0, color: 'white' }}>a</h1>
+            <h1 style={{ opacity: 0, color: 'white' }}>a</h1>
+            <Controller>
+              <Scene
+                offset={300}
+                triggerHook='onEnter'
+                reverse={true}
+                indicators
+                globalSceneOptions={{ triggerHook: 'onEnter' }}
+                duration={0}
+                pin
+              >
+                {(a, b, c) => {
+                  if (a) {
+                    anime({
+                      targets: '#teste-scroll',
+                      translateX: [200, 0],
+                      opacity: [0, 1],
+                    })
+                    setStartScrollAnimations(true)
+                  } else if (startScrollAnimations) {
+                    anime({
+                      targets: '#teste-scroll',
+                      translateX: [0, 200],
+                      opacity: [1, 0],
+                    })
+                  }
+                  return <div />
+                }}
+              </Scene>
+            </Controller>
+            <div id='teste-scroll' style={{ height: 300, width: 20, backgroundColor: 'orange', opacity: 0 }} />
+            <h1 style={{ opacity: 0, color: 'white' }}>a</h1>
+            <h1 style={{ opacity: 0, color: 'white' }}>a</h1>
+            <h1 style={{ opacity: 0, color: 'white' }}>a</h1>
+            <h1 style={{ opacity: 0, color: 'white' }}>a</h1>
+            <h1 style={{ opacity: 0, color: 'white' }}>a</h1>
+            <h1 style={{ opacity: 0, color: 'white' }}>a</h1>
+            <h1 style={{ opacity: 0, color: 'white' }}>a</h1>
+            <h1 style={{ opacity: 0, color: 'white' }}>a</h1>
+          </div>
         </div>
       )}
     </React.Fragment>
