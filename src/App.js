@@ -102,9 +102,38 @@ const App = () => {
         </AnimationContainer>
       ) : (
         <div>
-          <h1 style={{ opacity: 0, color: 'white' }}>a</h1>
+          <Controller>
+            <Scene
+              offset={1}
+              triggerHook='onLeave'
+              reverse={true}
+              indicators
+              globalSceneOptions={{ triggerHook: 'onEnter' }}
+              duration={0}
+              pin
+            >
+              {(a, b, c) => {
+                if (a) {
+                  anime({
+                    targets: '#initial-scroll',
+                    translateX: [200, 0],
+                    opacity: [0, 1],
+                  })
+                  setStartScrollAnimations(true)
+                } else if (startScrollAnimations) {
+                  anime({
+                    targets: '#initial-scroll',
+                    translateX: [0, 200],
+                    opacity: [1, 0],
+                  })
+                }
+                return <div />
+              }}
+            </Scene>
+          </Controller>
+
           <div>
-            suhahusa
+            <div id='initial-scroll' style={{ height: 300, width: 20, backgroundColor: 'blue', opacity: 0 }} />
             <h1 style={{ opacity: 0, color: 'white' }}>a</h1>
             <h1 style={{ opacity: 0, color: 'white' }}>a</h1>
             <h1 style={{ opacity: 0, color: 'white' }}>a</h1>
