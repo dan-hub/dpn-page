@@ -14,6 +14,7 @@ const App = () => {
   // Text showed on initial animations
   const [currentText, setCurrentText] = useState('Just another portifolio')
   const [pageStatus, setPageStatus] = useState('start-animation')
+  const [breakText, setBreakText] = useState(true)
   const [startScrollAnimations, setStartScrollAnimations] = useState(false)
 
   // Execute start timeline
@@ -113,28 +114,48 @@ const App = () => {
               pin
             >
               {(a, b, c) => {
-                if (a) {
-                  anime({
-                    targets: '#initial-scroll',
-                    translateX: [200, 0],
-                    opacity: [0, 1],
-                  })
-                  setStartScrollAnimations(true)
-                } else if (startScrollAnimations) {
-                  anime({
-                    targets: '#initial-scroll',
-                    translateX: [0, 200],
-                    opacity: [1, 0],
-                  })
-                }
+                setBreakText(!a)
                 return <div />
               }}
             </Scene>
           </Controller>
 
           <div>
-            <div id='initial-scroll' style={{ height: 300, width: 20, backgroundColor: 'blue', opacity: 0 }} />
-            <h1 style={{ opacity: 0, color: 'white' }}>a</h1>
+            <div style={{ display: 'flex', flexDirection: 'column', height: '100vh', justifyContent: 'center' }}>
+              <AnimatedTitle>
+                <TitleFragment breakText={breakText && '0'} size={70} offset={0} class='column-1'>
+                  <h1>DANIEL</h1>
+                </TitleFragment>
+                <TitleFragment breakText={breakText && '30vw'} size={140} offset={70} class='column-3'>
+                  <h1>DANIEL</h1>
+                </TitleFragment>
+                <TitleFragment breakText={breakText && '70vw'} size={300} offset={140 + 70} class='column-4'>
+                  <h1>DANIEL</h1>
+                </TitleFragment>
+              </AnimatedTitle>
+              <AnimatedTitle style={{ marginLeft: 100 }}>
+                <TitleFragment breakText={breakText && '0'} size={70} offset={0} class='column-1'>
+                  <h1>PORTO</h1>
+                </TitleFragment>
+                <TitleFragment breakText={breakText && '15vw'} size={140} offset={70} class='column-3'>
+                  <h1>PORTO</h1>
+                </TitleFragment>
+                <TitleFragment breakText={breakText && '45vw'} size={300} offset={140 + 70} class='column-4'>
+                  <h1>PORTO</h1>
+                </TitleFragment>
+              </AnimatedTitle>
+              <AnimatedTitle>
+                <TitleFragment breakText={breakText && '0'} size={150} offset={0} class='column-1'>
+                  <h1>NUNEZ</h1>
+                </TitleFragment>
+                <TitleFragment breakText={breakText && '24vw'} size={55} offset={150} class='column-3'>
+                  <h1>NUNEZ</h1>
+                </TitleFragment>
+                <TitleFragment breakText={breakText && '44vw'} size={300} offset={150 + 55} class='column-4'>
+                  <h1>NUNEZ</h1>
+                </TitleFragment>
+              </AnimatedTitle>
+            </div>
             <h1 style={{ opacity: 0, color: 'white' }}>a</h1>
             <h1 style={{ opacity: 0, color: 'white' }}>a</h1>
             <h1 style={{ opacity: 0, color: 'white' }}>a</h1>
@@ -220,6 +241,35 @@ const AnimationContainer = styled.div`
   > * {
     margin: auto;
     position: absolute;
+  }
+`
+
+const AnimatedTitle = styled.div`
+  display: flex;
+  width: 100%;
+  height: 170px;
+`
+
+const TitleFragment = styled.div`
+  transition: transform 1s ease-in-out;
+  overflow: hidden;
+  position: relative;
+  width: ${({ size }) => size}px;
+  color: white;
+  font-size: 70px;
+  font-family: Arial, Helvetica, sans-serif;
+  ${({ breakText }) =>
+    breakText
+      ? `
+    transform: translateX(${breakText});
+  `
+      : ''}
+  h1 {
+    left: ${({ offset }) => -offset}px;
+    position: absolute;
+    font-family: 'Roboto';
+    font-weight: 900;
+    margin: 0;
   }
 `
 
