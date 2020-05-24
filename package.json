@@ -1,5 +1,5 @@
 {
-  "homepage": "http://dan-hub.github.io/dpn-page",
+  "homepage": "http://dpnunez.com",
   "name": "dpn-page",
   "version": "0.1.0",
   "private": true,
@@ -19,7 +19,8 @@
     "prettier": "^1.18.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-scripts": "3.4.1"
+    "react-scripts": "3.4.1",
+    "react-scrollmagic": "^2.2.0"
   },
   "scripts": {
     "start": "react-scripts start",
