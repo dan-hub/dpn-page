@@ -3,7 +3,7 @@ import styled, { keyframes } from 'styled-components'
 import { Controller, Scene } from 'react-scrollmagic'
 import anime from 'animejs/lib/anime.es.js'
 
-import video from '../../../assets/background-video.mp4'
+const video_stock = 'https://assets.mixkit.co/videos/preview/mixkit-traffic-in-an-underground-tunnel-4067-large.mp4'
 
 const Header = () => {
   const [breakText, setBreakText] = useState(true)
@@ -29,9 +29,9 @@ const Header = () => {
 
       <div>
         <HeaderContainer isTranslated={!breakText}>
-          <video muted='muted' loop='loop' autoplay='autoplay' src={video} class='background' />
+          <video muted='muted' loop='loop' autoplay='autoplay' src={video_stock} class='background' />
           <video muted='muted' loop='loop' autoplay='autoplay'>
-            <source src={video} />
+            <source src={video_stock} />
           </video>
           <AnimatedTitle>
             <TitleFragment breakText={breakText && '0'} size={70} offset={0} class='column-1'>
