@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "cc47e7ef7f8a94a566eb952ea6b5540a",
+    "revision": "d0ec68fa278c8145a8bda236c3d5f11f",
     "url": "/dpn-page/index.html"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/dpn-page/static/js/2.3e0c7c3b.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "fe9a0be2a389862c5539",
-    "url": "/dpn-page/static/js/main.d4e98e2a.chunk.js"
+    "revision": "df2bb4a8ab2df7aca24e",
+    "url": "/dpn-page/static/js/main.4da666ac.chunk.js"
   },
   {
     "revision": "5b9513b141c35bef1912",

@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.js": "/dpn-page/static/js/main.d4e98e2a.chunk.js",
-    "main.js.map": "/dpn-page/static/js/main.d4e98e2a.chunk.js.map",
+    "main.js": "/dpn-page/static/js/main.4da666ac.chunk.js",
+    "main.js.map": "/dpn-page/static/js/main.4da666ac.chunk.js.map",
     "runtime-main.js": "/dpn-page/static/js/runtime-main.821c1bea.js",
     "runtime-main.js.map": "/dpn-page/static/js/runtime-main.821c1bea.js.map",
     "static/js/2.3e0c7c3b.chunk.js": "/dpn-page/static/js/2.3e0c7c3b.chunk.js",
     "static/js/2.3e0c7c3b.chunk.js.map": "/dpn-page/static/js/2.3e0c7c3b.chunk.js.map",
     "index.html": "/dpn-page/index.html",
-    "precache-manifest.2fbd194bb6a4fd3c0e4d450f934acf8e.js": "/dpn-page/precache-manifest.2fbd194bb6a4fd3c0e4d450f934acf8e.js",
+    "precache-manifest.da03ef442842c8dfbe9e264d5e9e179d.js": "/dpn-page/precache-manifest.da03ef442842c8dfbe9e264d5e9e179d.js",
     "service-worker.js": "/dpn-page/service-worker.js",
     "static/js/2.3e0c7c3b.chunk.js.LICENSE.txt": "/dpn-page/static/js/2.3e0c7c3b.chunk.js.LICENSE.txt",
     "static/media/cover.jpg": "/dpn-page/static/media/cover.31aec21c.jpg"
@@ -15,6 +15,6 @@
   "entrypoints": [
     "static/js/runtime-main.821c1bea.js",
     "static/js/2.3e0c7c3b.chunk.js",
-    "static/js/main.d4e98e2a.chunk.js"
+    "static/js/main.4da666ac.chunk.js"
   ]
 }
