@@ -37,35 +37,56 @@ const Header = () => {
           </video>
           <AnimatedTitle>
             <TitleFragment breakText={breakText && '0'} size={70} offset={0} class='column-1'>
-              <h1>DANIEL</h1>
+              <div style={{ position: 'absolute', width: '100%', height: '100%', overflow: 'hidden' }}>
+                <h1>DANIEL</h1>
+              </div>
             </TitleFragment>
             <TitleFragment breakText={breakText && '30vw'} size={140} offset={70} class='column-3'>
-              <h1>DANIEL</h1>
+              <div style={{ position: 'absolute', width: '100%', height: '100%', overflow: 'hidden' }}>
+                <h1>DANIEL</h1>
+              </div>
             </TitleFragment>
             <TitleFragment breakText={breakText && '70vw'} size={300} offset={140 + 70} class='column-4'>
-              <h1>DANIEL</h1>
+              <div style={{ position: 'absolute', width: '100%', height: '100%', overflow: 'hidden' }}>
+                <h1>DANIEL</h1>
+              </div>
             </TitleFragment>
           </AnimatedTitle>
           <AnimatedTitle style={{ marginLeft: 100 }}>
             <TitleFragment breakText={breakText && '0'} size={70} offset={0} class='column-1'>
-              <h1>PORTO</h1>
+              <div style={{ position: 'absolute', width: '100%', height: '100%', overflow: 'hidden' }}>
+                <h1>PORTO</h1>
+              </div>
             </TitleFragment>
             <TitleFragment breakText={breakText && '15vw'} size={140} offset={70} class='column-3'>
-              <h1>PORTO</h1>
+              <div style={{ position: 'absolute', width: '100%', height: '100%', overflow: 'hidden' }}>
+                <h1>PORTO</h1>
+              </div>
+              <Line />
             </TitleFragment>
             <TitleFragment breakText={breakText && '45vw'} size={300} offset={140 + 70} class='column-4'>
-              <h1>PORTO</h1>
+              <div style={{ position: 'absolute', width: '100%', height: '100%', overflow: 'hidden' }}>
+                <h1>PORTO</h1>
+              </div>
+              <Line />
             </TitleFragment>
           </AnimatedTitle>
           <AnimatedTitle>
             <TitleFragment breakText={breakText && '0'} size={150} offset={0} class='column-1'>
-              <h1>NUNEZ</h1>
+              <div style={{ position: 'absolute', width: '100%', height: '100%', overflow: 'hidden' }}>
+                <h1>NUNEZ</h1>
+              </div>
             </TitleFragment>
-            <TitleFragment breakText={breakText && '24vw'} size={55} offset={150} class='column-3'>
-              <h1>NUNEZ</h1>
+            <TitleFragment breakText={breakText && '30vw'} size={55} offset={150} class='column-3'>
+              <div style={{ position: 'absolute', width: '100%', height: '100%', overflow: 'hidden' }}>
+                <h1>NUNEZ</h1>
+              </div>
+              <Line />
             </TitleFragment>
             <TitleFragment breakText={breakText && '44vw'} size={300} offset={150 + 55} class='column-4'>
-              <h1>NUNEZ</h1>
+              <div style={{ position: 'absolute', width: '100%', height: '100%', overflow: 'hidden' }}>
+                <h1>NUNEZ</h1>
+              </div>
             </TitleFragment>
           </AnimatedTitle>
         </HeaderContainer>
@@ -79,12 +100,10 @@ const AnimatedTitle = styled.div`
   display: flex;
   width: 100%;
   height: 170px;
-  overflow: hidden;
 `
 
 const TitleFragment = styled.div`
   transition: transform 1s ease-in-out;
-  overflow: hidden;
   position: relative;
   width: ${({ size }) => size}px;
   color: white;
@@ -124,7 +143,6 @@ const HeaderContainer = styled.div`
   height: 100vh;
   justify-content: center;
   position: relative;
-  overflow: hidden;
   perspective: 1000px;
 
   video {
@@ -148,4 +166,14 @@ const HeaderContainer = styled.div`
   }
 `
 
+const Line = styled.div`
+  height: 9999px;
+  right: 0px;
+  width: 2px;
+  background-color: rgb(255, 255, 255, 0.3);
+  margin: 0;
+  transform: translateY(-1000px);
+  position: absolute;
+  left: 0px;
+`
 export default Header
