@@ -94,7 +94,7 @@ const HomePage = () => {
           </svg>
         </AnimationContainer>
       ) : (
-        <div>
+        <div style={{ overflow: 'hidden' }}>
           <Header />
           <div style={{ height: '100vh', width: '100%' }} />
         </div>
